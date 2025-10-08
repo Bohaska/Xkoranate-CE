@@ -1,7 +1,7 @@
 #ifndef EVENTEDITOR_H
 #define EVENTEDITOR_H
 
-#include <QtWidgets>
+#include <QtGui>
 
 #include "abstractoptionswidget.h"
 #include "event.h"
@@ -13,6 +13,8 @@
 #include "paradigms/abstractparadigm.h"
 #include "signuplisteditor/signuplisteditor.h"
 #include "eventeditor/competitionselector.h"
+
+#include <QStackedLayout>
 
 class XkorEventEditor : public QWidget
 {

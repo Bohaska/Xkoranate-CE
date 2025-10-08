@@ -35,11 +35,11 @@ XkorApplication::XkorApplication(int & c, char * * v) : QApplication(c, v)
     connect(saveAction, SIGNAL(triggered()), cw, SLOT(saveFile()));
 
     saveAsAction = new QAction(QIcon(":/icons/document-save-as"), XkorApplication::tr("Save file as…"), this);
-    saveAsAction->setShortcut(Qt::CTRL + Qt::SHIFT + Qt::Key_S);
+    saveAsAction->setShortcut(Qt::CTRL | Qt::SHIFT | Qt::Key_S);
     connect(saveAsAction, SIGNAL(triggered()), cw, SLOT(saveFileAs()));
 
     tableAction = new QAction(QIcon(":/icons/table-generator"), XkorApplication::tr("Table generator"), this);
-    tableAction->setShortcut(Qt::CTRL + Qt::Key_T);
+    tableAction->setShortcut(Qt::CTRL | Qt::Key_T);
     connect(tableAction, SIGNAL(triggered()), this, SLOT(tableGenerator()));
 
     // toolbar
@@ -97,6 +97,7 @@ void XkorApplication::refreshSearchPaths()
 	sportDirectory.cd("sports");
 #endif
     QDir::setSearchPaths("sports", QStringList(sportDirectory.absolutePath()));
+    qDebug() << "Sport search path set to:" << sportDirectory.absolutePath();
 
 	QDir::setSearchPaths("events", settings->value("eventDirectory").toStringList());
 	QDir::setSearchPaths("resultsExport", settings->value("resultExportDirectory").toStringList());

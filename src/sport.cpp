@@ -11,7 +11,7 @@ XkorSport::XkorSport()
 
 QString XkorSport::alphabetizedName()
 {
-	if(m_alphaName != QString::null)
+	if(m_alphaName != QString())
 		return m_alphaName;
 	else
 		return m_name;

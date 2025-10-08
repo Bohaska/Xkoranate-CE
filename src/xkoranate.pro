@@ -4,18 +4,19 @@
 TEMPLATE = app
 TARGET = xkoranate
 
-# mac:TARGET = xkoranate.app
-# mac:CONFIG += ppc x86
-# mac:CONFIG = x86_64
-# mac:ICON = icons/xkoranate.icns
+# mac: TARGET = xkoranate.app
+mac:QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.15
+mac:CONFIG += x86_64 arm64
+CONFIG += c++11
+#mac:CONFIG = x86_64
+mac:ICON = icons/xkoranate.icns
 CONFIG += warn_on
 DEPENDPATH += .
 INCLUDEPATH += .
 RESOURCES += icons.qrc
 RC_FILE += xkoranate.rc
 DESTDIR = ../
-QT += widgets
-QT += xml
+QT += core gui xml widgets
 
 # Input
 HEADERS += xml/xmlindex.h \

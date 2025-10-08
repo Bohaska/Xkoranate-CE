@@ -1,11 +1,16 @@
 #ifndef SPORTSELECTOR_H
 #define SPORTSELECTOR_H
 
-#include <QtWidgets>
+#include <QtGui>
 #include "abstractoptionswidget.h"
 #include "sport.h"
 
-class XkorSportSelector : public QWidget
+#include <QTreeView>
+#include <QGridLayout>
+
+#include <QGroupBox>
+
+class XkorSportSelector : public QGroupBox
 {
 	Q_OBJECT
 	public:

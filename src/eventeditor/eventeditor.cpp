@@ -1,4 +1,5 @@
-#include "eventeditor.h"
+#include "eventeditor/eventeditor.h"
+#include <QPushButton>
 
 #include "xml/xmlindex.h"
 #include "xml/xmlsportreader.h"
@@ -79,7 +80,7 @@ void XkorEventEditor::initLayout()
 	connect(prev, SIGNAL(clicked()), this, SLOT(goPrev()));
 	next = new QPushButton(tr("Continue"));
 	next->setDisabled(true);
-	connect(next, SIGNAL(clicked()), this, SLOT(goNext()));
+	connect(next, &QPushButton::clicked, this, &XkorEventEditor::goNext);
 
 	// main layout
 	layout = new QGridLayout(this);

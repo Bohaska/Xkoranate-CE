@@ -9,6 +9,12 @@
 #include "rpeditor/rpeditor.h"
 #include "navigationwidget.h"
 
+#include <QLineEdit>
+#include <QStackedWidget>
+#include <QTreeWidget>
+#include <QWidget>
+#include <QFileDialog>
+
 class XkorCentralWidget : public QWidget
 {
 	Q_OBJECT
@@ -38,7 +44,7 @@ class XkorCentralWidget : public QWidget
 
 		// editor widgets
 		XkorEventEditor * ee;
-		XkorRPEditor * rpe;
+		XkorRpEditor * rpe;
 
 		XkorEvent * currentEvent;
 
