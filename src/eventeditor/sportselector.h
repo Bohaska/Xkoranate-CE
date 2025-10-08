@@ -17,7 +17,7 @@ class XkorSportSelector : public QGroupBox
 		XkorSportSelector(QWidget * parent = 0);
 		void setSelectedSport(QString fullName);
 		XkorSport sport();
-		void updateSportList();
+		void updateSportList(const QString &sportPath);
 
 	signals:
 		void paradigmOptionsChanged(QHash<QString, QVariant> paradigmOptions);

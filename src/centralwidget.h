@@ -21,7 +21,7 @@ class XkorCentralWidget : public QWidget
 
 	public:
 		XkorCentralWidget(QWidget * parent = 0);
-        void loadSports();
+        void loadSports(const QString &sportPath);
 	signals:
 		void eventDirectoryChanged(QString dir);
 		void fileChanged(QString filename);

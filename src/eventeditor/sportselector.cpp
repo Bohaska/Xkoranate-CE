@@ -101,7 +101,7 @@ void XkorSportSelector::updateSport()
     }
 }
 
-void XkorSportSelector::updateSportList()
+void XkorSportSelector::updateSportList(const QString &sportPath)
 {
     isLoading = true;
     try
@@ -119,7 +119,7 @@ void XkorSportSelector::updateSportList()
 
         // load the sports
         XkorXmlIndex x;
-        x.traverse("sports:./");
+        x.traverse(sportPath);
 
         std::map<QString, QString> s = x.getAllFiles();
         for(std::map<QString, QString>::iterator i = s.begin(); i != s.end(); ++i)

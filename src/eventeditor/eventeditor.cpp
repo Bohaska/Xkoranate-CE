@@ -114,9 +114,9 @@ void XkorEventEditor::initSportSelector()
 	connect(sportSelector, SIGNAL(paradigmOptionsChanged(QHash<QString, QVariant>)), this, SLOT(updateParadigmOptions(QHash<QString, QVariant>)));
 }
 
-void XkorEventEditor::loadSports()
+void XkorEventEditor::loadSports(const QString &sportPath)
 {
-    sportSelector->updateSportList();
+    sportSelector->updateSportList(sportPath);
 }
 
 void XkorEventEditor::setData(XkorEvent data, XkorRPList rpList)
@@ -224,7 +224,4 @@ void XkorEventEditor::updateSport(XkorSport s)
 	setDataChanged();
 }
 
-void XkorEventEditor::updateSportList()
-{
-	sportSelector->updateSportList();
-}
+

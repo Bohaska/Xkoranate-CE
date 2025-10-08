@@ -14,6 +14,12 @@ CONFIG += warn_on
 DEPENDPATH += .
 INCLUDEPATH += .
 RESOURCES += icons.qrc
+
+# Copy sports directory to Contents/Resources
+sports.files = $$PWD/../sports
+sports.path = Contents/Resources
+QMAKE_BUNDLE_DATA += sports
+
 RC_FILE += xkoranate.rc
 DESTDIR = ../
 QT += core gui xml widgets

@@ -61,9 +61,9 @@ QList<QPair<QUuid, XkorEvent *> > XkorCentralWidget::events()
 	return nw->events();
 }
 
-void XkorCentralWidget::loadSports()
+void XkorCentralWidget::loadSports(const QString &sportPath)
 {
-    ee->loadSports();
+    ee->loadSports(sportPath);
 }
 
 void XkorCentralWidget::newFile()

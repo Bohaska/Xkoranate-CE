@@ -22,12 +22,12 @@ class XkorEventEditor : public QWidget
 	
 	public:
 		XkorEventEditor(QWidget * parent = 0);
-        void loadSports();
+        void loadSports(const QString &sportPath);
 	public slots:
         XkorEvent data() { updateData(); return m_data; }
 		void setData(XkorEvent data, XkorRPList rpList);
 		void updateData();
-		void updateSportList();
+
 	signals:
 		void dataChanged();
 		void resultExportDirectoryChanged(QString dir);
